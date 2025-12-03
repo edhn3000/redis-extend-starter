@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.edhn.cache</groupId>
 	<artifactId>redis-extend-starter</artifactId>
-	<version>1.2.0-SNAPSHOT</version>
+	<version>1.2.0</version>
 	<name>redis-extend</name>
 	<description>extend jetcache/redisTemplate to support more feature, such as multi json serializers</description>
 
