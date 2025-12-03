@@ -1,0 +1,36 @@
+
+
+jetcache:
+  remote:
+    default:
+      type: redis
+      keyConvertor: jackson
+      valueEncoder: jackson
+      valueDecoder: jackson
+      poolConfig:
+        minIdle: 8
+        maxIdle: 32
+        maxTotal: 128
+      host: 127.0.0.1
+      port: 6379
+      password:
+      timeout: 3000
+#      masterName: mymaster
+#      sentinels:
+#      readFromSlave: true
+#      slaves:
+#        slave1:
+#          poolConfig:
+#            minIdle: 8
+#            maxIdle: 32
+#            maxTotal: 128
+#          host:
+#          port: 6380
+#          password: 
+#          timeout: 5000
+
+
+logging:
+  level:
+    com.edhn.cache.redis.async: debug
+    com.edhn.cache.redis.service.impl.JedisSimpleApiImpl: debug

@@ -1,0 +1,18 @@
+spring:
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6379,127.0.0.1:6479,127.0.0.1:6579
+    password: 
+    timeout: 5000
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 32
+        max-active: 128
+          
+
+
+logging:
+  level:
+    com.edhn.cache.redis.async: debug
+    com.edhn.cache.redis.service.impl.RedisTemplateSimpleApiImpl: debug

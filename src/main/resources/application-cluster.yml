@@ -1,0 +1,28 @@
+
+
+cache:
+  redis:
+    enabled: true
+    cluster: 127.0.0.1:6379,127.0.0.1:6479,127.0.0.1:6579
+    password:
+    timeout: 5000
+
+
+jetcache:
+  remote:
+    default:
+      type: redis
+      keyConvertor: jackson
+      valueEncoder: jackson
+      valueDecoder: jackson
+      poolConfig:
+        minIdle: 16
+        maxIdle: 64
+        maxTotal: 512
+      cluster: 127.0.0.1:6379,127.0.0.1:6479,127.0.0.1:6579
+      password: ${cache.redis.password:}
+
+logging:
+  level:
+    com.edhn.cache.redis.async: debug
+    com.edhn.cache.redis.service.impl.JedisSimpleApiImpl: debug

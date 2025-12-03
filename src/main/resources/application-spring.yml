@@ -1,0 +1,18 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
+    lettuce:
+      pool:
+        min-idle: 8
+        max-idle: 32
+        max-active: 128
+          
+
+
+logging:
+  level:
+    com.edhn.cache.redis.async: debug
+    com.edhn.cache.redis.service.impl.RedisTemplateSimpleApiImpl: debug

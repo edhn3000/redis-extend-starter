@@ -1,0 +1,31 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+cache:
+  async-persist:
+    namespace: async.write.unit_test
+    restore-interval: 5
+
+jetcache:
+  statIntervalMinutes: 60
+  areaInCacheName: false
+  local:
+    default:
+      type: caffeine
+      keyConvertor: jackson
+      limit: 10000
+  remote:
+    default:
+      keyConvertor: jackson
+      valueEncoder: jackson
+      valueDecoder: jackson
+      poolConfig:
+        minIdle: 16
+        maxIdle: 64
+        maxTotal: 512
+
+
+logging:
+  level:
+    root: info

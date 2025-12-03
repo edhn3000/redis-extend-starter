@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.edhn.cache.redis.configuration.CacheExtendProperties, \
+com.edhn.cache.redis.configuration.CacheSerializerConfiguration, \
+com.edhn.cache.redis.configuration.CacheServiceCongfiguration, \
+com.edhn.cache.redis.configuration.HealthConfiguration
